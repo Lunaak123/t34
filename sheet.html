@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Operations</title>
+    <link rel="stylesheet" href="sheet.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Operations Panel (Fixed at the Top) -->
+        <div class="operations-panel">
+            <h1>Operations Panel</h1>
+
+            <!-- Row: Primary Column, Operation Columns, and Row/Column Range Inputs -->
+            <div class="operation-row">
+                <div class="input-group">
+                    <label for="primary-column">Primary Column:</label>
+                    <input type="text" id="primary-column" placeholder="A">
+                </div>
+
+                <div class="input-group">
+                    <label for="operation-columns">Operation Columns:</label>
+                    <input type="text" id="operation-columns" placeholder="A,B,C">
+                </div>
+
+                <div class="input-group">
+                    <label for="row-range">Row Range:</label>
+                    <input type="text" id="row-range" placeholder="e.g., 1-5">
+                </div>
+
+                <div class="input-group">
+                    <label for="col-range">Column Range:</label>
+                    <input type="text" id="col-range" placeholder="e.g., A-C">
+                </div>
+            </div>
+
+            <!-- Second row: Operation Type and Null/Not Null -->
+            <div class="operation-row">
+                <div class="input-group">
+                    <label for="operation-type">Operation Type:</label>
+                    <select id="operation-type">
+                        <option value="and">AND</option>
+                        <option value="or">OR</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="operation">Null/Not-Null:</label>
+                    <select id="operation">
+                        <option value="null">Null</option>
+                        <option value="not-null">Not Null</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Apply Button -->
+            <button id="apply-operation" class="apply-button">Apply Operation</button>
+        </div>
+
+        <!-- Excel Sheet Display Area -->
+        <div id="sheet-content" class="sheet-content"></div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+        <script src="sheet.js"></script>
+    </div>
+</body>
+</html>

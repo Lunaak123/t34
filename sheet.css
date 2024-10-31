@@ -1,0 +1,54 @@
+/* Main Styles for Operations Panel */
+.operations-panel {
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-bottom: 2px solid #1565c0;
+    position: fixed;
+    top: 0;
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.operation-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+}
+
+.input-group label {
+    font-size: 14px;
+}
+
+.input-group input, .input-group select {
+    font-size: 12px;
+    padding: 5px;
+}
+
+.apply-button {
+    background-color: #43a047;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    float: right;
+}
+
+.apply-button:hover {
+    background-color: #388e3c;
+}
+
+/* Highlighting Style */
+.highlighted {
+    background-color: #ffeb3b; /* Yellow highlight */
+}
